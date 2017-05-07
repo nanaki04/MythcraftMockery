@@ -10,7 +10,7 @@ defmodule Mc.Mock.Menu do
   def get_title(menu), do: menu.title
   def get_description(menu), do: menu.description
 
-  def on_select_mock(_menu_state, [{client_id: client_id}]) do
+  def on_select_mock(_menu_state, [{:client_id, client_id}]) do
     IO.puts("Menu Selected: " <> client_id) 
   end
 end
