@@ -3,7 +3,7 @@ defmodule Mc.Mock.Menu do
 
   def reduce_items(menu, state, lambda) do
     Enum.reduce(["Item 1", "Item 2", "Item 3"], state, fn(text, state) ->
-      lambda.(state, text, &__MODULE__.on_select_mock/1)
+      lambda.(state, text, &__MODULE__.on_select_mock/2)
     end)
   end
 
